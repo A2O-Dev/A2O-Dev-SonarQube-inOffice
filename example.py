@@ -1,5 +1,5 @@
 def hello_world():
-    print("Hello, world! This is an example script.")
+    print("This is an example script python.")
 
 if __name__ == "__main__":
     hello_world()

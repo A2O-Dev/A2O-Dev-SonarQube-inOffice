@@ -21,11 +21,11 @@ Este repositorio contiene el archivo docker-compose.yaml que permite levantar un
 4. Ejecute el archivo docker compose
     * `docker compose up -d`
 
-## ¿Como analisar el codigo de tu repositorio con github Actions?
+## ¿Como analizar el código de tu repositorio con github Actions?
 1. Verifica que el repositorio de Github en el que te encuentras tenga habilitada la funcion de Actions, ve a tu repositorio:
     * Settings -> Actions (panel de navegacion izquierdo) -> Actions permissions -> Allow all actions and reusable workflows.
 2. En la raiz de tu repositorio crea la siguiente carpeta '.github/workflows'
-3. Dentro de la carpeta .github/workflows que creaste en tu repositori, crea un archivo .yaml con el contenido de .github/workflows/sonar-connections.yaml (de este reposirotiro)
+3. En la carpeta .github/workflows que creaste en tu repositorio, crea un archivo .yaml copiando el contenido de .github/workflows/sonar-connections.yaml (de este reposirotiro, opcion como ejemplo, puedes mejorar el archivo para tus requerimientos)
 4. Añade las siguientes secrets en las configuraciones de tu repositorio, ve a:
     * Settings -> Secrets and variables (panel de navegacion izquierdo) -> Actions -> pestaña Secrets -> Repository secrets
     * Secrets que deben ser añadidas:
@@ -58,6 +58,9 @@ Este repositorio contiene el archivo docker-compose.yaml que permite levantar un
 
         ```
 
-6. Con las configuraciones realizadas, cada cambio que tu realices en la rama 'feature/*' o 'main' de tu repositorio sera analisado por el servidor SonarQuebe de A2ODev.
+6. Con las configuraciones realizadas, cada cambio que tu realices en la rama 'feature/*' o 'main' de tu repositorio sera analizada por el servidor SonarQuebe de A2ODev.
 7. Verifica que la ejecucion del Workflow haya concluido sin errores en la ventana de Actions.
 8. Revisa los resultados del analisis en http://172.29.81.0:9000 con tus credenciales de acceso.
+
+ 
+- Any feedback will be apreciated ;)

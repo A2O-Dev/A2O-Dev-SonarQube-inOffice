@@ -59,4 +59,5 @@ Este repositorio contiene el archivo docker-compose.yaml que permite levantar un
         ```
 
 6. Con las configuraciones realizadas, cada cambio que tu realices en la rama 'feature/*' o 'main' de tu repositorio sera analisado por el servidor SonarQuebe de A2ODev.
-7. verifica los resultados en http://172.29.81.0:9000 con tus credenciales de acceso.
+7. Verifica que la ejecucion del Workflow haya concluido sin errores en la ventana de Actions.
+8. Revisa los resultados del analisis en http://172.29.81.0:9000 con tus credenciales de acceso.

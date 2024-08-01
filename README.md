@@ -21,7 +21,7 @@ Este repositorio contiene el archivo docker-compose.yaml que permite levantar un
 4. Ejecute el archivo docker compose
     * `docker compose up -d`
 
-## ¿Como analisar tu codigo desde github Actions?
+## ¿Como analisar el codigo de tu repositorio con github Actions?
 1. Verifica que el repositorio de Github en el que te encuentras tenga habilitada la funcion de Actions, ve a tu repositorio:
     * Settings -> Actions (panel de navegacion izquierdo) -> Actions permissions -> Allow all actions and reusable workflows.
 2. En la raiz de tu repositorio crea la siguiente carpeta '.github/workflows'

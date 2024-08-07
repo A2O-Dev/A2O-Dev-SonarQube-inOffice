@@ -34,6 +34,9 @@ Este repositorio contiene el archivo docker-compose.yaml que permite levantar un
             ## Token de acceso generado en el servidor sonarqube inoffice (solicitarlo al equipo de infra de A2ODev)
             SONAR_TOKEN= _sonar_token
 
+            ## ID de red de la VPN de A2ODev (id zerotier network)
+            ZEROTIER_NETWORK_ID=_zerotier_network_id
+            
             ## Token de acceso a la VPN de A2odev "Zerotier" (solicitarlo al equipo de infra de A2ODev)
             ZEROTIER_CENTRAL_TOKEN=_zerotier_token
         ```
@@ -53,12 +56,9 @@ Este repositorio contiene el archivo docker-compose.yaml que permite levantar un
         ## Nombre del proyecto (debe ser cambiado con el nombre del proyecto que se este trabajando, previamente creado en sonarquebe) 
         SONAR_PROJECT_NAME=test
 
-        # ID de red de la VPN de A2ODev (id zerotier network)
-        ZEROTIER_NETWORK_ID=88503383905b2859
-
         ```
 
-6. Con las configuraciones realizadas, cada cambio que tu realices en la rama 'feature/*' o 'main' de tu repositorio sera analizada por el servidor SonarQuebe de A2ODev.
+6. Con las configuraciones realizadas, cada cambio que tu realices en la rama 'feature/*', 'develop', y 'main' de tu repositorio sera analizada por el servidor SonarQuebe de A2ODev.
 7. Verifica que la ejecucion del Workflow haya concluido sin errores en la ventana de Actions.
 8. Revisa los resultados del analisis en http://172.29.81.0:9000 con tus credenciales de acceso.
 

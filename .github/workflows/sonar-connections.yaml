@@ -4,6 +4,12 @@ on:
   push:
     branches:
       - main
+      - develop
+      - feature/*
+  pull_request:
+    branches:
+      - main
+      - develop
       - feature/*
 
 jobs:
@@ -14,7 +20,7 @@ jobs:
       - name: Zerotier Configuration
         uses: zerotier/github-action@v1
         with:
-          network_id: ${{ vars.ZEROTIER_NETWORK_ID }}
+          network_id: ${{ secrets.ZEROTIER_NETWORK_ID }}
           auth_token: ${{ secrets.ZEROTIER_CENTRAL_TOKEN }}
 
       - name: Ping to Nexus Sever InOffice
@@ -43,4 +49,7 @@ jobs:
             -Dsonar.projectKey=${{ vars.SONAR_PROJECT_KEY }}
             -Dsonar.projectName="${{ vars.SONAR_PROJECT_NAME }}"
             -Dsonar.sources=.
+            -Dsonar.pullrequest.key=${{ github.event.pull_request.number }}
+            -Dsonar.pullrequest.branch=${{ github.head_ref }}
+            -Dsonar.pullrequest.base=${{ github.base_ref }}
             -X
